@@ -10,7 +10,6 @@ wp-cli.yml
 *.css.map
 
 
-### Gulp Starter Theme ###
 # Compiled Styles #
 # To ignore compiled styles, uncomment the following #
 # dist/css/style.css

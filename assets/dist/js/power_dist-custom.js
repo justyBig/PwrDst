@@ -14,7 +14,10 @@ jQuery(document).ready(function ($) {
 
     $('#donate_btn').on('click', function () {
         var donationAmount = parseInt(amountInput.val());
-
+        if (donationAmount < 1) {
+            amountInput.val(50);
+            return;
+        }
         if (donationTotal + donationAmount > donationGoal) {
             amountInput.val(Math.abs(donationGoal - donationTotal));
             amountInput.attr('max', Math.abs(donationGoal - donationTotal));
@@ -41,9 +44,6 @@ jQuery(document).ready(function ($) {
         }
     );
 
-    $("[type='number']").keypress(function (evt) {
-        evt.preventDefault();
-    });
     $('.whyLink').on('click', function (e) {
         e.preventDefault();
         if ($(this).attr('data-click-state') == 1) {
