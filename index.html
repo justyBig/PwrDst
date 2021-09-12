@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns#">
+        <!-- enable Open Graph: http://ogp.me/ -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Donate Module | Power Distributors</title>
+        <link rel="canonical" href="https://www.powerdistributors.com/" />
+        <meta name="description" content="Power Distributors" />
+        <meta name="robots" content="noindex" />
+        <!-- optionally add more Open Graph metadata: http://ogp.me/#metadata -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+        <!-- Place favicon.icon in the root directory -->
+        <link rel=icon href=./assets/dist/imgs/favicon.png>
+        <!-- Include stylesheets here. -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/dist/css/power_dist-custom.css" />
+        <link
+            rel="stylesheet"
+            href="./assets/dist/css/power_dist-vendor.min.css"
+        />
+    </head>
+
+    <body>
+        <header></header>
+        <main id="content" role="main" tabindex="-1">
+            <div class="container">
+                <div class="header">
+                    <h1 class="title">Help Us Out!</h1>
+                    <div class="txtBubble">
+                        We need $<span id="remaining">1500 </span>&nbsp;more to
+                        reach our goal!
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="module front">
+                        <div class="module__progress">
+                            <span class="progress_bar"></span>
+                        </div>
+                        <div class="module__content">
+                            <h2>
+                                <span class="orange">Only 3 days left</span> to
+                                reach $5000.
+                            </h2>
+                            <p>
+                                Join the <span id="donors">70</span> other
+                                donors who are helping make a positive impact in
+                                the community. Every dollar helps and we can’t
+                                thank everyone enough.
+                            </p>
+                            <div class="form">
+                                <span
+                                    >$<input
+                                        id="donationAmount"
+                                        type="number"
+                                        step="50"
+                                        value="50"
+                                        min="0"
+                                        max="5000"
+                                /></span>
+                                <button id="donate_btn" class="btn--green">
+                                    Donate Now
+                                </button>
+                            </div>
+                            <a class="whyLink" href="#" data-click-state="0">
+                                Why donate $50?
+                            </a>
+                        </div>
+                    </div>
+                    <div class="back whyLink" data-click-state="1">
+                        <div class="module__content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed non porta justo. Sed mi
+                                arcu, tincidunt at tortor consectetur, volutpat
+                                aliquam lacus. Maecenas vel nulla at ligula
+                                dignissim tincidunt. Vivamus in mauris dolor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrapper">
+                    <a class="btn" href="#">Save for Later</a>
+                    <a class="btn" href="#">Tell A Friend</a>
+                </div>
+            </div>
+        </main>
+        <!-- Include scripts here. Concatenate & minify for performance -->
+        <script
+            type="text/javascript"
+            src="./assets/dist/js/power_dist-vendor.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="./assets/dist/js/power_dist-custom.js"
+        ></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+/********************************
+	Button
+********************************/
+$buttonDefault: (
+    'textColor': $btnTxtGray,
+    'bgColor': $btnBodyGray,
+    'borderColor': $btnBorder,
+    'hoverTextColor': $btnTxtGray,
+    'hoverBgColor': $btnBodyHoverGray,
+    'hoverBorderColor': $btnBorder,
+);
+@mixin btn($button: $buttonDefault) {
+    cursor: pointer;
+    display: inline-block;
+    padding: 16px 0;
+    min-width: 150px;
+    border: 1px solid map-get($button, 'borderColor');
+    border-radius: 5px;
+    font-family: $font;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    background-color: map-get($button, 'bgColor');
+    color: map-get($button, 'textColor');
+    text-decoration: none;
+    transition: all 0.4s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: map-get($button, 'hoverTextColor');
+        background-color: map-get($button, 'hoverBgColor');
+        box-shadow: inset 0 0 0 1px map-get($button, 'hoverBorderColor'); // inset border
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+/***** CLASSES *****/
+// Green Button
+$btnGreen: (
+    'textColor': $white,
+    'bgColor': $green,
+    'borderColor': $inputBorder,
+    'hoverTextColor': $white,
+    'hoverBgColor': $greenHover,
+    'hoverBorderColor': $inputBorder,
+);
+
+.btn--green {
+    @include btn($btnGreen);
+}
+.btn {
+    @include btn();
+}
