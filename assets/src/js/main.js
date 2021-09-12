@@ -8,7 +8,6 @@ var hoverMessage = $('#remaining');
 /*========================================================================
         DOCUMENT READY
 ========================================================================*/
-// This document ready syntax supports use of the $ alias in jQuery no conflict mode. See README.md for more info and alternatives.
 jQuery(document).ready(function ($) {
     progressBar.width((donationTotal * 100) / donationGoal + '%');
 
@@ -28,7 +27,7 @@ jQuery(document).ready(function ($) {
         progressBar.width(newWidth + '%');
         donationTotal += donationAmount;
         numDonations += 1;
-        donors.html(parseInt(donors.html()) + 1);
+        donors.html('$' + parseInt(donors.html()) + 1);
         hoverMessage.html(donationGoal - donationTotal);
         if (donationTotal >= donationGoal) {
             goalComplete();
@@ -36,7 +35,6 @@ jQuery(document).ready(function ($) {
     });
     $('.module__progress').hover(
         function () {
-            console.log('in');
             $('.txtBubble').addClass('show');
         },
         function () {
@@ -52,30 +50,20 @@ jQuery(document).ready(function ($) {
             showFront();
         }
     });
-}); // end no-conflict document ready
+});
 
 function goalComplete(params) {
     $('.front .module__content').html(
-        '<h2 class="complete"> We DID it!!!</h2>'
+        '<h2 class="complete"> We made it to $5000!!!</h2>'
     );
     progressBar.addClass('complete');
 }
 function showBack() {
-    $('.front').css('transform', 'perspective(600px) rotateY(0deg)');
-    $('.back').css('transform', 'perspective(600px) rotateY(180deg)');
+    $('.front').css('transform', 'perspective(800px) rotateY(0deg)');
+    $('.back').css('transform', 'perspective(800px) rotateY(180deg)');
 }
 
 function showFront() {
-    $('.back').css('transform', 'perspective(600px) rotateY(0)');
-    $('.front').css('transform', 'perspective(600px) rotateY(-180deg)');
+    $('.back').css('transform', 'perspective(800px) rotateY(0)');
+    $('.front').css('transform', 'perspective(800px) rotateY(-180deg)');
 }
-
-/*========================================================================
-        WINDOW LOAD
-========================================================================*/
-jQuery(window).on('load', function (e) {}); // end: Window Load - no-conflict
-
-/*========================================================================
-        WINDOW RESIZE
-========================================================================*/
-jQuery(window).on('resize', function (e) {}); // end: window resize
