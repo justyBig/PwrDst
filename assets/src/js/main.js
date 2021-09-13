@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
         progressBar.width(newWidth + '%');
         donationTotal += donationAmount;
         numDonations += 1;
-        donors.html('$' + parseInt(donors.html()) + 1);
+        donors.html(parseInt(donors.html()) + 1);
         hoverMessage.html('$' + (donationGoal - donationTotal));
         if (donationTotal >= donationGoal) {
             goalComplete();
